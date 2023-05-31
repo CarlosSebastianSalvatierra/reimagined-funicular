@@ -1,61 +1,61 @@
-.secciones {
-    position: relative;
-    height: 50vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #000000;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+body {
+  background: linear-gradient(to bottom, white, #eff5e3) ;
 }
 
-.secciones::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: url(https://cdn.pixabay.com/photo/2015/01/08/18/26/man-593333_1280.jpg);
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(100%);
-    opacity: 0.5;
-    z-index: -1;
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
- .content {
-    position: relative;
-    z-index: 1;
+.slide-in-text {
+  opacity: 0;
+  animation: slide-in 1s ease-in-out forwards;
 }
 
+.seccion {
+  margin-top: 2.5vw;
+  margin-bottom: 5vw;
+}
 
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-    filter: grayscale(0%);
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in-text {
+  opacity: 0;
+}
+
+#logo {
+  width: 5vw;
 }
 
 .social-icons a {
-    margin: 8vw;
-    margin-bottom: 5vw;
-  }
+  margin: 8vw;
+  margin-top: 10vw;
+  margin-bottom: 5vw;
+}
 
-  .social-icons a i {
-    font-size: 2vw;
-    color: #000; 
-  }
+.social-icons a i {
+  font-size: 2vw;
+  color: #000; 
+}
 
-  .navbar-nav {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+footer {
+  background-color: #000;
+  color: whiter;
+}
 
-  .navbar-brand {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+#filaGris {
+  background-color: grey;
+}
