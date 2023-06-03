@@ -8,120 +8,385 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="funciones.js"></script>
     <title>Capacitaciones</title>
   </head>
   <body>
-   
-    <div class="container-fluid bg-dark.bg-gradient"> 
+    <!-- NAV -->
+    <section id="nav">
+      <div class="container-fluid fixed-top">
+        <div class="row justify-content-center">
+          <div class="col text-center">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white ">
+              <a class="navbar-brand" href="#">
+                <img id="logo" src="https://cdn.pixabay.com/photo/2016/09/14/20/50/tooth-1670434_1280.png" alt="">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="#acercaDeNosotros">Acerca de nosotros</a>
+                    </li>                    
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#nuestrosClientes">Testimonios </a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#capacitaciones">Capacitaciones </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#contacto">Contacto </a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+      <!-- HOME -->
+    <section id="home">
+      <div class="container">
         <div class="row">
-            <div class="col-sm-4 " > </div>
-            <div class="col-sm-4" style="justify-content: center;" > CAPACITACIONES </div>
-            <div class="col-sm-4 " > <i class="bi bi-youtube"></i> <i class="bi bi-whatsapp"></i> </div>
+          <div class="col">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/08/05/10/students-1807505_1280.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5><button onclick="scrollToSection('#capacitaciones')">Capacitaciones </button></h5>
+                      <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/08/05/10/students-1807505_1280.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5><button onclick="scrollToSection('#capacitaciones')">Preinscripcion</button></h5>
+                      <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2017/08/31/15/56/woman-2701154_1280.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5><button onclick="scrollToSection('#contacto')">Contacto</button></h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
             </div>
-    </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FIN DEL HOME -->
 
-
+  <!-- ACERCA DE NOSOTROS -->
+  <section class="seccion" id="acercaDeNosotros">
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#"> Inicio</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Capacitaciones </a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Contacto </a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Testimonios </a>
-                  </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Acerca de nosotros</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"></a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-              </ul>
+      <div class="row justify-content-center">
+        <div class="col text-center slide-in-text">
+          <h1>Acerca de nosotros</h1>
+        </div>
+      </div>
+      <div class="row justify-content-center text-center slide-in-text">
+        <p class="slide-in-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam amet assumenda necessitatibus adipisci atque culpa, quaerat laborum omnis deleniti voluptatem ducimus eligendi sed architecto cumque provident corporis porro veniam dolores illo mollitia ipsa aspernatur, sequi minus? Mollitia alias at eum, praesentium nostrum, minima vero tenetur sapiente commodi repellendus magnam ipsa molestiae rerum voluptate ad fugit, tempore similique? Fugit fugiat et, harum hic nemo, eum animi at architecto quidem delectus natus inventore fuga quia dolores sequi ab necessitatibus perferendis, mollitia autem omnis eos molestias quas. Aspernatur quis explicabo qui doloribus impedit ipsa repellat. Ea aut repellat dicta, incidunt modi dolore commodi amet inventore, voluptas quibusdam eum. Quidem cupiditate voluptatum minima, necessitatibus repellendus deleniti eius ipsum recusandae? Iure sit at voluptate nobis, repudiandae ad, dolorem adipisci consectetur tenetur id quidem nesciunt dolor dicta, perferendis similique quam corporis animi ratione quo nulla maxime aut nihil praesentium. Inventore nisi molestiae sit veritatis, tempore non.</p>
+      </div>
+      <!-- CARDS -->
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="imagen1.jpg" class="card-img-top" alt="Imagen 1">
+            <div class="card-body">
+              <h5 class="card-title">Card 1</h5>
+              <p class="card-text">Contenido de la card 1.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
             </div>
-        </nav>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="imagen2.jpg" class="card-img-top" alt="Imagen 2">
+            <div class="card-body">
+              <h5 class="card-title">Card 2</h5>
+              <p class="card-text">Contenido de la card 2.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="imagen3.jpg" class="card-img-top" alt="Imagen 3">
+            <div class="card-body">
+              <h5 class="card-title">Card 3</h5>
+              <p class="card-text">Contenido de la card 3.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+<!-- FIN ACERCA DE NOSOTROS -->
 
-
-
-            <div class="container-fluid">
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="https://cdn.pixabay.com/photo/2016/11/08/05/10/students-1807505_1280.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5><button>Capacitaciones </button></h5>
-                          <p>Some representative placeholder content for the first slide.</p>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://cdn.pixabay.com/photo/2016/11/08/05/10/students-1807505_1280.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5><button>Preinscripcion</button></h5>
-                          <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://cdn.pixabay.com/photo/2017/08/31/15/56/woman-2701154_1280.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5><button>Contacto</button></h5>
-                          <p>Some representative placeholder content for the third slide.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-
+  <!-- NUESTROS CLIENTES -->
+  <section class="seccion" id="nuestrosClientes">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col text-center slide-in-text">
+          <h1>Nuestros clientes: </h1>
+        </div>
+      </div>
+      <div class="row justify-content-center text-center slide-in-text">
+        <p class="slide-in-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam amet assumenda necessitatibus adipisci atque culpa, quaerat laborum omnis deleniti voluptatem ducimus eligendi sed architecto cumque provident corporis porro veniam dolores illo mollitia ipsa aspernatur, sequi minus? Mollitia alias at eum, praesentium nostrum, minima vero tenetur sapiente commodi repellendus magnam ipsa molestiae rerum voluptate ad fugit, tempore similique? Fugit fugiat et, harum hic nemo, eum animi at architecto quidem delectus natus inventore fuga quia dolores sequi ab necessitatibus perferendis, mollitia autem omnis eos molestias quas. Aspernatur quis explicabo qui doloribus impedit ipsa repellat. Ea aut repellat dicta, incidunt modi dolore commodi amet inventore, voluptas quibusdam eum. Quidem cupiditate voluptatum minima, necessitatibus repellendus deleniti eius ipsum recusandae? Iure sit at voluptate nobis, repudiandae ad, dolorem adipisci consectetur tenetur id quidem nesciunt dolor dicta, perferendis similique quam corporis animi ratione quo nulla maxime aut nihil praesentium. Inventore nisi molestiae sit veritatis, tempore non.</p>
+      </div>
+      <!-- CARDS -->
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="imagen1.jpg" class="card-img-top" alt="Imagen 1">
+            <div class="card-body">
+              <h5 class="card-title">Card 1</h5>
+              <p class="card-text">Contenido de la card 1.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
             </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="imagen2.jpg" class="card-img-top" alt="Imagen 2">
+            <div class="card-body">
+              <h5 class="card-title">Card 2</h5>
+              <p class="card-text">Contenido de la card 2.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="imagen3.jpg" class="card-img-top" alt="Imagen 3">
+            <div class="card-body">
+              <h5 class="card-title">Card 3</h5>
+              <p class="card-text">Contenido de la card 3.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- FIN ACERCA DE NUESTROS CLIENTES -->
 
+  <!-- CAPACITACIONES -->
+  <section class="seccion" id="capacitaciones">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col text-center slide-in-text">
+          <h1>Capacitaciones:</h1>
+        </div>
+      </div>
+      <div class="row justify-content-center text-center slide-in-text">
+        <p class="slide-in-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam amet assumenda necessitatibus adipisci atque culpa, quaerat laborum omnis deleniti voluptatem ducimus eligendi sed architecto cumque provident corporis porro veniam dolores illo mollitia ipsa aspernatur, sequi minus? Mollitia alias at eum, praesentium nostrum, minima vero tenetur sapiente commodi repellendus magnam ipsa molestiae rerum voluptate ad fugit, tempore similique? Fugit fugiat et, harum hic nemo, eum animi at architecto quidem delectus natus inventore fuga quia dolores sequi ab necessitatibus perferendis, mollitia autem omnis eos molestias quas. Aspernatur quis explicabo qui doloribus impedit ipsa repellat. Ea aut repellat dicta, incidunt modi dolore commodi amet inventore, voluptas quibusdam eum. Quidem cupiditate voluptatum minima, necessitatibus repellendus deleniti eius ipsum recusandae? Iure sit at voluptate nobis, repudiandae ad, dolorem adipisci consectetur tenetur id quidem nesciunt dolor dicta, perferendis similique quam corporis animi ratione quo nulla maxime aut nihil praesentium. Inventore nisi molestiae sit veritatis, tempore non.</p>
+      </div>
+  </section>
+  <!-- FIN CAPACITACIONES -->
 
+    <!-- CONTACTO -->
+    <section class="seccion" id="contacto">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col text-center slide-in-text">
+            <h1>Contacto:</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="social-icons text-center mb-3 mt-3">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+        <form>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" aria-describedby="basic-addon1">
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="E-Mail" aria-label="E-Mail" aria-describedby="basic-addon1">
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Telefono" aria-label="Telefono" aria-describedby="basic-addon1">
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col text-center">
+              <button class="btn btn-primary">Enviar</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h4 class="text-center mb-3 mt-3">Ubicacion</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1402.2001521349614!2d-66.33918409340627!3d-33.29232824528209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d4394eec782487%3A0x2bcfdfba83514ad4!2sUniversidad%20Nacional%20de%20San%20Luis!5e0!3m2!1ses-419!2sar!4v1685831178080!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- FIN CONTACTO -->
 
+  <!-- SECCION BLOG -->
+    <section class="seccion" id="blog">
+      <div class="container">
+        <h2 class="text-center">Blog</h2>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card">
+              <img src="imagen2.jpg" class="card-img-top" alt="Imagen 2">
+              <div class="card-body">
+                <h5 class="card-title">Card 1</h5>
+                <p class="card-text">Contenido de la card 1.</p>
+                <a href="articulo1.html" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <img src="imagen2.jpg" class="card-img-top" alt="Imagen 2">
+              <div class="card-body">
+                <h5 class="card-title">Card 2</h5>
+                <p class="card-text">Contenido de la card 2.</p>
+                <a href="articulo2.html" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <img src="imagen2.jpg" class="card-img-top" alt="Imagen 2">
+              <div class="card-body">
+                <h5 class="card-title">Card 3</h5>
+                <p class="card-text">Contenido de la card 3.</p>
+                <a href="articulo3.html" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card">
+              <img src="imagen2.jpg" class="card-img-top" alt="Imagen 2">
+              <div class="card-body">
+                <h5 class="card-title">Card 4</h5>
+                <p class="card-text">Contenido de la card 4.</p>
+                <a href="articulo4.html" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <img src="imagen2.jpg" class="card-img-top" alt="Imagen 2">
+              <div class="card-body">
+                <h5 class="card-title">Card 5</h5>
+                <p class="card-text">Contenido de la card 5.</p>
+                <a href="articulo5.html" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <!-- Repite el bloque de código de la tarjeta para las siguientes 4 tarjetas -->
+          <div class="col-lg-4">
+            <div class="card">
+              <img src="imagen2.jpg" class="card-img-top" alt="Imagen 2">
+              <div class="card-body">
+                <h5 class="card-title">Card 6</h5>
+                <p class="card-text">Contenido de la card 6.</p>
+                <a href="articulo6.html" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FIN SECCION BLOG -->
 
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row" id="filaGris">
+          <div class="col">
+            Contenido del footer
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <span class="text-muted">Contenido del footer</span>
+          </div>
+          <div class="col-lg-6 d-flex flex-nowrap align-items-right">
+            <a class="enlace" href="">Home</a>
+            <a class="enlace" href="">Acerca de nosotros</a>
+            <a class="enlace" href="">Nuestros clientes</a>
+            <a class="enlace" href="">Capacitaciones</a>
+            <a class="enlace" href="">Contacto</a>
+            <a class="enlace" href="">Blog</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- FIN DEL FOOTER -->
 
-
-
-
-
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>

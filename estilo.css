@@ -37,7 +37,7 @@ body {
 }
 
 #logo {
-  width: 5vw;
+  width: 4vw;
 }
 
 .social-icons a {
@@ -51,6 +51,17 @@ body {
   color: #000; 
 }
 
+.social-icons {
+  font-size: 1.5rem; /* Tamaño inicial del texto */
+}
+
+@media (max-width: 576px) {
+  .social-icons {
+    font-size: 2rem; /* Tamaño del texto en dispositivos pequeños */
+  }
+}
+
+
 footer {
   background-color: #000;
   color: whiter;
@@ -58,4 +69,27 @@ footer {
 
 #filaGris {
   background-color: grey;
+}
+
+.imagen-blog {
+  width: 50vw;
+}
+
+.titulo-articulo {
+  margin-top: 5vw;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.enlace {
+  color: white;
+  text-decoration: none;
+  margin: 0.5rem;
+}
+
+.enlace:hover {
+  text-decoration: underline;
+  color: white;
 }
