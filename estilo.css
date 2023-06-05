@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(to bottom, white, #a0af82) ;
+  font-family: 'Open Sans', sans-serif;
 }
 
 @keyframes slide-in {
@@ -12,6 +13,22 @@ body {
     transform: translateY(0);
   }
 }
+
+/* .animated-text {
+  animation: slide-down 1s forwards;
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
 
 .slide-in-text {
   opacity: 0;
@@ -49,10 +66,15 @@ body {
 .social-icons a i {
   font-size: 2vw;
   color: #000; 
+  transition: text-shadow 0.15s ease-in-out;
 }
 
 .social-icons {
   font-size: 1.5rem; /* Tamaño inicial del texto */
+}
+
+.social-icons a i:hover {
+  text-shadow: #000 2px 2px 4px;
 }
 
 @media (max-width: 576px) {
@@ -92,4 +114,42 @@ footer {
 .enlace:hover {
   text-decoration: underline;
   color: white;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.card-img-container {
+  overflow: hidden;
+}
+
+.card-img-top {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scaleX(1.2) scaleY(1.2);
+}
+
+@media (max-width: 768px) {
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.carousel-caption {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption button {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-container {
+  width: 70vw;
 }
