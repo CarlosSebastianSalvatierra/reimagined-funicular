@@ -118,10 +118,14 @@ footer {
 
 .card {
   overflow: hidden;
+  margin-top: 10%;
+  height: 90%;
 }
 
 .card-img-container {
   overflow: hidden;
+  height: 200px;
+  width: 100%;
 }
 
 .card-img-top {
