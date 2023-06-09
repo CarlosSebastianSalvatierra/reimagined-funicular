@@ -1,6 +1,11 @@
 body {
-  background: linear-gradient(to bottom, white, #a0af82) ;
+  background-color: bisque;
   font-family: 'Open Sans', sans-serif;
+}
+
+#containerPadre {
+  background-color: white;
+  border-radius: 1em;
 }
 
 @keyframes slide-in {
@@ -13,21 +18,6 @@ body {
     transform: translateY(0);
   }
 }
-
-/* .animated-text {
-  animation: slide-down 1s forwards;
-}
-
-@keyframes slide-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */
 
 
 .slide-in-text {
@@ -83,6 +73,15 @@ body {
   }
 }
 
+.animated-text {
+  text-align: center;
+  text-indent: 0em;
+}
+
+.card-text {
+  text-align: justify;
+  text-indent: 0em;
+}
 
 footer {
   background-color: #000;
@@ -156,4 +155,10 @@ footer {
 
 .carousel-container {
   width: 70vw;
+}
+
+
+p {
+  text-indent: 3em;
+  text-align: justify;
 }
