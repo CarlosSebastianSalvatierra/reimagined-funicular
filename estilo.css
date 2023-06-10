@@ -1,11 +1,22 @@
 body {
-  background-color: bisque;
+  background-color: rgb(5,134,178);
   font-family: 'Open Sans', sans-serif;
+  color: #000;
 }
 
 #containerPadre {
   background-color: white;
   border-radius: 1em;
+}
+
+#logo {
+  margin-left: 1em;
+}
+
+nav {
+  background-color: rgba(251,253,253,255);
+  color: #000;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes slide-in {
@@ -147,6 +158,8 @@ footer {
 
 .carousel-caption {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  text-indent: 0em;
 }
 
 .carousel-caption button {
@@ -161,4 +174,8 @@ footer {
 p {
   text-indent: 3em;
   text-align: justify;
+}
+
+#footerText {
+  color: white;
 }
