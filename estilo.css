@@ -1,3 +1,5 @@
+/* BODY Y SECCIONES, ESTILOS GENERALES DE LA PAGINA */
+
 body {
   background-color: rgba(45,162,166,255);
   font-family: 'Open Sans', sans-serif;
@@ -9,15 +11,78 @@ body {
   border-radius: 1em;
 }
 
-#logo {
-  margin-left: 1em;
-}
+/* SECCIONES */
 
 nav {
   background-color: rgba(251,253,253,255);
   color: #000;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+
+footer {
+  background-color: #000;
+  color: whiter;
+}
+
+#footerText {
+  color: white;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* LOGO */
+
+#logo {
+  margin-left: 1em;
+}
+
+#logo {
+  width: 4vw;
+}
+
+/* ICONOS DE REDES */
+
+.social-icons a {
+  margin: 8vw;
+  margin-top: 10vw;
+  margin-bottom: 5vw;
+}
+
+.social-icons a i {
+  font-size: 2vw;
+  color: #000; 
+  transition: text-shadow 0.15s ease-in-out;
+}
+
+.social-icons {
+  font-size: 1.5rem; 
+}
+
+.social-icons a i:hover {
+  text-shadow: #000 2px 2px 4px;
+}
+
+p {
+  text-indent: 3em;
+  text-align: justify;
+}
+
+/* ENLACES */
+
+.enlace {
+  color: white;
+  text-decoration: none;
+  margin: 0.5rem;
+}
+
+.enlace:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+/* TEXTO ANIMADO */
 
 @keyframes slide-in {
   0% {
@@ -30,15 +95,9 @@ nav {
   }
 }
 
-
 .slide-in-text {
   opacity: 0;
   animation: slide-in 1s ease-in-out forwards;
-}
-
-.seccion {
-  margin-top: 2.5vw;
-  margin-bottom: 5vw;
 }
 
 @keyframes fade-in {
@@ -54,29 +113,11 @@ nav {
   opacity: 0;
 }
 
-#logo {
-  width: 4vw;
-}
-
-.social-icons a {
-  margin: 8vw;
-  margin-top: 10vw;
+.seccion {
+  margin-top: 2.5vw;
   margin-bottom: 5vw;
 }
 
-.social-icons a i {
-  font-size: 2vw;
-  color: #000; 
-  transition: text-shadow 0.15s ease-in-out;
-}
-
-.social-icons {
-  font-size: 1.5rem; /* Tamaño inicial del texto */
-}
-
-.social-icons a i:hover {
-  text-shadow: #000 2px 2px 4px;
-}
 
 @media (max-width: 576px) {
   .social-icons {
@@ -89,19 +130,9 @@ nav {
   text-indent: 0em;
 }
 
-.card-text {
-  text-align: justify;
-  text-indent: 0em;
-}
 
-footer {
-  background-color: #000;
-  color: whiter;
-}
+/* BLOG Y ARTICULOS */
 
-#filaGris {
-  background-color: grey;
-}
 
 .imagen-blog {
   width: 50vw;
@@ -111,25 +142,19 @@ footer {
   margin-top: 5vw;
 }
 
-.text-right {
-  text-align: right;
-}
 
-.enlace {
-  color: white;
-  text-decoration: none;
-  margin: 0.5rem;
-}
 
-.enlace:hover {
-  text-decoration: underline;
-  color: white;
-}
+/* TARJETAS */
 
 .card {
   overflow: hidden;
   margin-top: 10%;
   height: 90%;
+}
+
+.card-text {
+  text-align: justify;
+  text-indent: 0em;
 }
 
 .card-img-container {
@@ -156,6 +181,8 @@ footer {
   }
 }
 
+/* CAROUSEL */
+
 .carousel-caption {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -167,18 +194,11 @@ footer {
 }
 
 .carousel-container {
-  width: 70vw;
+  width: 65vw;
 }
 
 
-p {
-  text-indent: 3em;
-  text-align: justify;
-}
-
-#footerText {
-  color: white;
-}
+/* FUENTE */
 
 .font-italic {
   font-style: italic;
@@ -187,6 +207,8 @@ p {
 .font-weight-bold {
   font-weight: bold;
 }
+
+/* ESTILOS AGREGADOS CON JS */
 
 .descripcionCreada {
   text-align: center;

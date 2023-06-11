@@ -4,36 +4,15 @@ function scrollToSection(sectionId) {
   }
 
 
-  function zoomIn(img) {
+function zoomIn(img) {
     img.style.transition = "transform 0.3s ease";
     img.style.transform = "scale(1.2)";
-  }
+}
   
-  function zoomOut(img) {
+function zoomOut(img) {
     img.style.transition = "transform 0.3s ease";
     img.style.transform = "";
-  }
-
-const animatedTexts = document.querySelectorAll('.animated-text');
-
-const observerOptions = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.5, // 50% del elemento visible
-};
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-      observer.unobserve(entry.target);
-    }
-  });
-}, observerOptions);
-
-animatedTexts.forEach((text) => {
-  observer.observe(text);
-});
+}
 
 
 function scrollToSectionMargen(event) {
@@ -45,28 +24,6 @@ function scrollToSectionMargen(event) {
     window.scrollTo({
       top: targetOffset,
       behavior: 'smooth'
-    });
-  }
-}
-
-function redirectToSection(event) {
-  event.preventDefault();
-  var targetSection = event.target.getAttribute('data-section');
-  var offset = 150;
-  
-  if (targetSection) {
-    var indexUrl = 'index.html'; // Cambia esto según la ubicación de tu archivo "index.html"
-    window.location.href = indexUrl + targetSection; // Redirige al archivo "index.html" con la sección específica
-    
-    window.addEventListener('DOMContentLoaded', function() {
-      var section = document.querySelector(targetSection);
-      if (section) {
-        var targetOffset = section.offsetTop - offset;
-        window.scrollTo({
-          top: targetOffset,
-          behavior: 'smooth'
-        });
-      }
     });
   }
 }
@@ -90,7 +47,7 @@ const mostrarDetalles = (posicion) => {
       // Asignar los valores del JSON a los elementos HTML
       tituloElement.textContent = capacitacion["titulo"];
       descripcionElement.textContent = capacitacion["descripcion"];
-      presentacionFormulario.textContent = "Formulario de Preinscripcion"
+      presentacionFormulario.textContent = "Formulario de Preinscripción"
 
       tituloElement.classList.add("descripcionCreada");
       descripcionElement.classList.add("descripcionCreada");
@@ -128,7 +85,7 @@ const agregarFormularioBootstrap = () => {
   var campoNombre = crearCampoFormulario('Nombre', 'nombre', 'text', 'Ingrese su nombre');
   var campoApellido = crearCampoFormulario('Apellido', 'apellido', 'text', 'Ingrese su apellido');
   var campoDni = crearCampoFormulario('DNI', 'dni', 'text', 'Ingrese su DNI');
-  var campoEmail = crearCampoFormulario('Email', 'email', 'email', 'Ingrese su correo electrónico');
+  var campoEmail = crearCampoFormulario('E-Mail', 'email', 'email', 'Ingrese su correo electrónico');
   var campoTelefono = crearCampoFormulario('Teléfono', 'telefono', 'text', 'Ingrese su número de teléfono');
 
 
@@ -184,22 +141,3 @@ const crearCampoFormulario = (labelText, name, type, placeholder) => {
 
   return campo;
 };
-
-
-
-function agregarLineas() {
-  // Crear elementos HTML para las líneas "Hola" y "Mundo"
-  var lineaHola = document.createElement('p');
-  lineaHola.textContent = "Hola";
-
-  var lineaMundo = document.createElement('p');
-  lineaMundo.textContent = "Mundo";
-
-  // Agregar los elementos al documento HTML
-  document.body.appendChild(lineaHola);
-  document.body.appendChild(lineaMundo);
-
-
-  var boton = document.getElementById("botonMandatario");
-  boton.onclick = agregarLineas;
-}
