@@ -187,3 +187,8 @@ p {
 .font-weight-bold {
   font-weight: bold;
 }
+
+.descripcionCreada {
+  text-align: center;
+  text-indent: 0em;
+}

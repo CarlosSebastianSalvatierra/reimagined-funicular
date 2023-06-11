@@ -20,7 +20,7 @@
   <body>
     <!-- NAV -->
     <section id="nav">
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">
           <img id="logo" src="logo3.png" alt="">
         </a>
@@ -237,7 +237,7 @@
               <div class="card-body">
                 <h5 class="card-title">Mandatario del automotor</h5>
                 <p class="card-text">Inicio: 16/06/2023 <br> Valor cuota: $7500 <br> Duracion: 6 meses<br> Modalidad: Presencial <br> Horarios: Viernes 13hs a 16hs </p>
-                <a class="btn btn-primary" id="botonMandatario" onclick="agregarLineas()">Ver más</a>
+                <a class="btn btn-primary" id="botonMandatario" onclick="mostrarDetalles(0)">Ver más</a>
               </div>
             </div>
           </div>
@@ -249,7 +249,7 @@
               <div class="card-body">
                 <h5 class="card-title">Personal Trainer</h5>
                 <p class="card-text">Inicio: 16/06/2023 <br> Valor cuota: $5000 <br> Duracion: 8 meses<br> Modalidad: Presencial <br> Horarios: Viernes 10hs a 13hs</p>
-                <a href="#" class="btn btn-primary">Ver más</a>
+                <a class="btn btn-primary" onclick="mostrarDetalles(1)">Ver más</a>
               </div>
             </div>
           </div>
@@ -261,7 +261,7 @@
               <div class="card-body">
                 <h5 class="card-title">Técnico en instalación de aire acondicionado</h5>
                 <p class="card-text">Inicio: 16/06/2023 <br> Valor cuota: $6000 <br> Duracion: 5 meses<br> Modalidad: Presencial <br> Horarios: Viernes 10hs a 13hs</p>
-                <a href="#" class="btn btn-primary">Ver más</a>
+                <a href="#" class="btn btn-primary" onclick="mostrarDetalles(2)">Ver más</a>
               </div>
             </div>
           </div>
@@ -275,7 +275,7 @@
             <div class="card-body">
               <h5 class="card-title">Barberia</h5>
               <p class="card-text">Inicio: 16/06/2023 <br> Valor cuota: $4500 <br> Duracion: 4 meses<br> Modalidad: Presencial <br> Horarios: Sabados 9hs a 12hs </p>
-              <a href="#" class="btn btn-primary">Ver más</a>
+              <a href="#" class="btn btn-primary" onclick="mostrarDetalles(3)">Ver más</a>
             </div>
           </div>
         </div>
@@ -287,7 +287,7 @@
             <div class="card-body">
               <h5 class="card-title">Asistente en laboratorio y análisis clínicos</h5>
               <p class="card-text">Inicio: 16/06/2023 <br> Valor cuota: $5000 <br> Duracion: 8 meses<br> Modalidad: Presencial <br> Horarios: Viernes 10hs a 13hs</p>
-              <a href="#" class="btn btn-primary">Ver más</a>
+              <a href="#" class="btn btn-primary" onclick="mostrarDetalles(4)">Ver más</a>
             </div>
           </div>
         </div>
@@ -299,7 +299,7 @@
             <div class="card-body">
               <h5 class="card-title">Masoterapia</h5>
               <p class="card-text">Inicio: 16/06/2023 <br> Valor cuota: $6000 <br> Duracion: 3 meses<br> Modalidad: Presencial <br> Horarios: Viernes 9hs a 12hs</p>
-              <a href="#" class="btn btn-primary">Ver más</a>
+              <a href="#" class="btn btn-primary" onclick="mostrarDetalles(5)">Ver más</a>
             </div>
           </div>
         </div>
@@ -314,7 +314,7 @@
           <div class="card-body">
             <h5 class="card-title">Inglés con certificado internacional</h5>
             <p class="card-text">Inicio: 19/06/2023 <br> Valor cuota: $7500 <br> Duracion: 10 meses<br> Modalidad: Virtual <br> Horarios: Lunes y viernes 17hs a 20hs </p>
-            <a href="#" class="btn btn-primary">Ver más</a>
+            <a href="#" class="btn btn-primary" onclick="mostrarDetalles(6)">Ver más</a>
           </div>
         </div>
       </div>
@@ -326,7 +326,7 @@
           <div class="card-body">
             <h5 class="card-title">Enfermeria y primeros auxilios</h5>
             <p class="card-text">Inicio: 16/06/2023 <br> Valor cuota: $5000 <br> Duracion: 8 meses<br> Modalidad: Presencial <br> Horarios: Viernes 10hs a 13hs</p>
-            <a href="#" class="btn btn-primary">Ver más</a>
+            <a href="#" class="btn btn-primary" onclick="mostrarDetalles(7)">Ver más</a>
           </div>
         </div>
       </div>
@@ -338,7 +338,7 @@
           <div class="card-body">
             <h5 class="card-title">Marketing digital</h5>
             <p class="card-text">Inicio: 16/06/2023 <br> Valor cuota: $5500 <br> Duracion: 5 meses<br> Modalidad: Virtual <br> Horarios: Martes y jueves 16hs a 19hs</p>
-            <a href="#" class="btn btn-primary">Ver más</a>
+            <a href="#" class="btn btn-primary" onclick="mostrarDetalles(8)">Ver más</a>
           </div>
         </div>
       </div>
@@ -353,7 +353,7 @@
         <div class="card-body">
           <h5 class="card-title">Electricista domiciliario y comercial</h5>
           <p class="card-text">Inicio: 21/06/2023 <br> Valor cuota: $5500 <br> Duracion: 5 meses<br> Modalidad: Presencial <br> Horarios: Miercoles 17hs a 20hs </p>
-          <a href="#" class="btn btn-primary">Ver más</a>
+          <a href="#" class="btn btn-primary" onclick="mostrarDetalles(9)">Ver más</a>
         </div>
       </div>
     </div>
