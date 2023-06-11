@@ -10,56 +10,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="logo3.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <script src="funciones.js"></script>
-    <title>Articulo 1 del blog</title>
+    <title>Progreso Activo - Alumnos de Enfermería del Instituto destacan en simulacro de emergencia</title>
 </head>
 <body>
     <!-- NAV -->
     <section id="nav">
-        <div class="container-fluid fixed-top">
-          <div class="row justify-content-center">
-            <div class="col text-center">
-              <nav class="navbar navbar-expand-lg navbar-light bg-white ">
-                <a class="navbar-brand" href="#">
-                  <img id="logo" src="https://cdn.pixabay.com/photo/2016/09/14/20/50/tooth-1670434_1280.png" alt="">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white ">
+        <a class="navbar-brand" href="index.html">
+          <img id="logo" src="logo3.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">                    
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#acercaDeNosotros">Acerca de nosotros</a>
+              </li>                    
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html#nuestrosClientes">Testimonios </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html#capacitaciones">Capacitaciones </a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="index.html#contacto">Contacto </a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown link
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">                    
-                      <li class="nav-item">
-                        <a class="nav-link" href="indexII.html#acercaDeNosotros">Acerca de nosotros</a>
-                      </li>                    
-                      <li class="nav-item active">
-                        <a class="nav-link" href="#nuestrosClientes">Testimonios </a>
-                      </li>
-                      <li class="nav-item active">
-                        <a class="nav-link" href="#capacitaciones">Capacitaciones </a>
-                      </li>
-                      <li class="nav-item active">
-                          <a class="nav-link" href="#contacto">Contacto </a>
-                        </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#"></a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Dropdown link
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-              </nav>
-            </div>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            </ul>
           </div>
-        </div>
+      </nav>
     </section>
 
     <div class="container" id="containerPadre">
@@ -110,22 +105,26 @@
 
 
     
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container-fluid">
-        <div class="row" id="filaGris">
-          <div class="col">
-            Contenido del footer
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-lg-6 d-flex flex-nowrap align-items-center">
+              <span id="footerText">2023 - San Luis, Argentina</span>
+            </div>
+            <div class="col-lg-6 d-flex flex-nowrap align-items-right">
+              <a class="enlace" href="index.html#home" onclick="redirectToSection(event)">Home</a>
+              <a class="enlace" href="#" data-section="#acercaDeNosotros" onclick="redirectToSection(event)">Acerca de nosotros</a>
+              <a class="enlace" href="index.html#nuestrosClientes" onclick="scrollToSectionMargen(event)">Nuestros clientes</a>
+              <a class="enlace" href="index.html#capacitaciones" onclick="scrollToSectionMargen(event)">Capacitaciones</a>
+              <a class="enlace" href="index.html#contacto" onclick="scrollToSectionMargen(event)">Contacto</a>
+              <a class="enlace" href="index.html#blog" onclick="scrollToSectionMargen(event)">Blog</a>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <span class="text-muted">Contenido del footer</span>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- FIN DEL FOOTER -->
+      </footer>
+      <!-- FIN DEL FOOTER -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

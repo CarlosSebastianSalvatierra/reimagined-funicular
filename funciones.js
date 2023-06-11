@@ -48,3 +48,26 @@ function scrollToSectionMargen(event) {
     });
   }
 }
+
+function redirectToSection(event) {
+  event.preventDefault();
+  var targetSection = event.target.getAttribute('data-section');
+  var offset = 150;
+  
+  if (targetSection) {
+    var indexUrl = 'index.html'; // Cambia esto según la ubicación de tu archivo "index.html"
+    window.location.href = indexUrl + targetSection; // Redirige al archivo "index.html" con la sección específica
+    
+    window.addEventListener('DOMContentLoaded', function() {
+      var section = document.querySelector(targetSection);
+      if (section) {
+        var targetOffset = section.offsetTop - offset;
+        window.scrollTo({
+          top: targetOffset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  }
+}
+

@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(5,134,178);
+  background-color: rgba(45,162,166,255);
   font-family: 'Open Sans', sans-serif;
   color: #000;
 }
@@ -178,4 +178,12 @@ p {
 
 #footerText {
   color: white;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.font-weight-bold {
+  font-weight: bold;
 }
