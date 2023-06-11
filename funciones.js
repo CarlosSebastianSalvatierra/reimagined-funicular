@@ -71,3 +71,52 @@ function redirectToSection(event) {
   }
 }
 
+
+const mostrarDetalles = () => {
+  fetch('datos.json')
+    .then(res => res.json())
+    .then(res => {
+      // Obtener la primera capacitación del arreglo
+      const primerCapacitacion = res[0];
+
+      var contenedor = document.getElementById("containerDetalles");
+
+      // Crear elementos HTML para mostrar los detalles
+      var div = document.createElement('div');
+      div.classList.add("container"); // Agregar la clase "container" al div
+
+      var tituloElement = document.createElement('p');
+      var descripcionElement = document.createElement('p');
+
+      // Asignar los valores del JSON a los elementos HTML
+      tituloElement.textContent = "Título: " + primerCapacitacion.titulo;
+      descripcionElement.textContent = "Descripción: " + primerCapacitacion.descripcion;
+
+      // Agregar los elementos al div
+      contenedor.appendChild(div);
+      div.appendChild(idElement);
+      div.appendChild(tituloElement);
+      div.appendChild(descripcionElement);
+    })
+    .catch(error => {
+      console.log('Error:', error);
+    });
+}
+
+
+function agregarLineas() {
+  // Crear elementos HTML para las líneas "Hola" y "Mundo"
+  var lineaHola = document.createElement('p');
+  lineaHola.textContent = "Hola";
+
+  var lineaMundo = document.createElement('p');
+  lineaMundo.textContent = "Mundo";
+
+  // Agregar los elementos al documento HTML
+  document.body.appendChild(lineaHola);
+  document.body.appendChild(lineaMundo);
+
+
+  var boton = document.getElementById("botonMandatario");
+  boton.onclick = agregarLineas;
+}
