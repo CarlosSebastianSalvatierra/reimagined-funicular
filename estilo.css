@@ -9,6 +9,7 @@ body {
 #containerPadre {
   background-color: white;
   border-radius: 1em;
+  margin-top: auto;
 }
 
 /* SECCIONES */
@@ -17,6 +18,12 @@ nav {
   background-color: rgba(251,253,253,255);
   color: #000;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+#ubicacion-text{
+  font-size: 50px;
+  
 }
 
 footer {

@@ -53,6 +53,11 @@ const mostrarDetalles = (posicion) => {
       descripcionElement.classList.add("descripcionCreada");
       presentacionFormulario.classList.add("descripcionCreada");
 
+      //Agregando estilo a los elementos HTML
+      tituloElement.style.fontFamily = "'Open Sans', sans-serif;"
+      tituloElement.style.textDecorationLine: 'underline';
+      descripcionElement.style.textIndent = "20px";
+
       // Agregar los elementos al div
       contenedor.appendChild(tituloElement);
       contenedor.appendChild(descripcionElement);
