@@ -21,10 +21,9 @@ nav {
 }
 
 
-#ubicacion-text{
+/* #ubicacion-text{
   font-size: 50px;
-  
-}
+} */
 
 footer {
   background-color: #000;
@@ -52,19 +51,18 @@ footer {
 /* ICONOS DE REDES */
 
 .social-icons a {
-  margin: 8vw;
-  margin-top: 10vw;
+  margin: 4vw;
   margin-bottom: 5vw;
 }
 
 .social-icons a i {
-  font-size: 2vw;
+  font-size: 1em;
   color: #000; 
   transition: text-shadow 0.15s ease-in-out;
 }
 
 .social-icons {
-  font-size: 1.5rem; 
+  font-size: 2em; 
 }
 
 .social-icons a i:hover {

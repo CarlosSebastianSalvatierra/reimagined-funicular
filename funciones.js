@@ -55,7 +55,7 @@ const mostrarDetalles = (posicion) => {
 
       //Agregando estilo a los elementos HTML
       tituloElement.style.fontFamily = "'Open Sans', sans-serif;"
-      tituloElement.style.textDecorationLine: 'underline';
+      tituloElement.style.textDecorationLine = 'underline';
       descripcionElement.style.textIndent = "20px";
 
       // Agregar los elementos al div
@@ -84,7 +84,7 @@ const agregarFormularioBootstrap = () => {
 
   // Crear formulario de Bootstrap
   var formulario = document.createElement('form');
-  formulario.classList.add('row', 'g-3', 'needs-validation');
+  formulario.classList.add('row', 'g-3');
 
   // Campos del formulario
   var campoNombre = crearCampoFormulario('Nombre', 'nombre', 'text', 'Ingrese su nombre');
@@ -121,23 +121,25 @@ const agregarFormularioBootstrap = () => {
   // Agregar el botón Enviar al formulario
   formulario.appendChild(botonEnviar);
 
+  formulario.addEventListener('submit', validarFormularioPreiscripcion);
+
   // Agregar el formulario al contenedor
   contenedor.appendChild(formulario);
 };
 
 // Función auxiliar para crear un campo de formulario
-const crearCampoFormulario = (labelText, name, type, placeholder) => {
+const crearCampoFormulario = (labelText, id, type, placeholder) => {
   var campo = document.createElement('div');
   campo.classList.add('col-md-6');
 
   var etiqueta = document.createElement('label');
-  etiqueta.htmlFor = name;
+  etiqueta.htmlFor = id;
   etiqueta.textContent = labelText;
 
   var input = document.createElement('input');
   input.type = type;
   input.classList.add('form-control');
-  input.name = name;
+  input.id = id;
   input.placeholder = placeholder;
   input.required = true;
 
@@ -146,3 +148,79 @@ const crearCampoFormulario = (labelText, name, type, placeholder) => {
 
   return campo;
 };
+
+
+function validarFormularioContacto() {
+  // Obtener los valores de los campos
+  var nombre = document.getElementById("nombreContacto").value;
+  var apellido = document.getElementById("apellidoContacto").value;
+  var email = document.getElementById("emailContacto").value;
+  var telefono = document.getElementById("telefonoContacto").value;
+
+  // Verificar si los campos están vacíos
+  if (nombre === "" || apellido === "" || email === "" || telefono === "") {
+    alert("Todos los campos son obligatorios");
+    return false;
+  }
+
+  // Verificar si el nombre y el apellido tienen más de 2 caracteres
+  if (nombre.length < 2 || apellido.length < 2) {
+    alert("El nombre y el apellido deben tener al menos 2 caracteres");
+    return false;
+  }
+
+  // Verificar si el email contiene un punto y un arroba
+  if (email.indexOf(".") === -1 || email.indexOf("@") === -1 || email.length < 6) {
+    alert("El email debe contener un punto y un arroba y no puede tener menos de 6 caracteres");
+    return false;
+  }
+
+  // Verificar si el teléfono tiene 10 dígitos
+  if (telefono.length < 10 || isNaN(telefono)) {
+    alert("El teléfono debe tener como mínimo 10 dígitos");
+    return false;
+  }
+
+  // Si todas las validaciones son exitosas, se enviará el formulario
+  alert("Sus datos se han enviado correctamente");
+  return true;
+}
+
+function validarFormularioPreiscripcion(event) {
+  event.preventDefault();
+
+  var nombre = document.getElementById("nombre").value;
+  var apellido = document.getElementById("apellido").value;
+  var dni = document.getElementById("dni").value;
+  var email = document.getElementById("email").value;
+  var telefono = document.getElementById("telefono").value;
+
+  // Validar que el nombre y apellido tengan más de dos caracteres
+  if (nombre.length < 2 || apellido.length < 2) {
+    alert("El nombre y el apellido deben tener al menos 2 caracteres");
+    return false;
+  }
+
+  // Validar que el DNI esté entre 1 millón y 99 millones
+  var dniNumero = parseInt(dni);
+  if (isNaN(dniNumero) || dniNumero < 1000000 || dniNumero > 99000000) {
+    alert("El DNI debe estar entre 1 millón y 99 millones");
+    return false;
+  }
+
+  // Validar que el email tenga más de 6 caracteres y contenga un arroba y un punto
+  if (email.length < 6 || email.indexOf("@") === -1 || email.indexOf(".") === -1) {
+    alert("El email debe tener más de 6 caracteres y contener un arroba (@) y un punto (.)");
+    return false;
+  }
+
+  // Validar que el teléfono tenga al menos 10 cifras
+  if (telefono.length < 10) {
+    alert("El teléfono debe tener al menos 10 cifras");
+    return false;
+  }
+
+  // Si todas las validaciones pasan, se puede enviar el formulario
+  alert("Se han registrado sus datos")
+  return true;
+}
