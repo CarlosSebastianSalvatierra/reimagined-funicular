@@ -186,6 +186,11 @@ p {
   }
 }
 
+.card-title {
+  overflow: hidden;
+  font-size: 1.2em;
+}
+
 /* CAROUSEL */
 
 .carousel-caption {
@@ -218,4 +223,19 @@ p {
 .descripcionCreada {
   text-align: center;
   text-indent: 0em;
+}
+
+/* FUNCION TEXTO AL SCROLLEAR */
+
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 1s ease, transform 1s ease;
+  text-align: center;
+  text-indent: 0em;
+}
+
+.scroll-animation.active {
+  opacity: 1;
+  transform: translateY(0);
 }

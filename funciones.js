@@ -224,3 +224,20 @@ function validarFormularioPreiscripcion(event) {
   alert("Se han registrado sus datos")
   return true;
 }
+
+// FUNCION PARA LA ANIMACION DEL TEXTO AL HACER SCROLL
+
+function checkScroll() {
+  var elements = document.querySelectorAll('.scroll-animation');
+  
+  for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
+    var position = element.getBoundingClientRect().top;
+    var windowHeight = window.innerHeight;
+    
+    if (position < windowHeight) {
+      element.classList.add('active');
+    }
+  }
+}
+window.addEventListener('scroll', checkScroll);
