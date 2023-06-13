@@ -20,11 +20,6 @@ nav {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-
-/* #ubicacion-text{
-  font-size: 50px;
-} */
-
 footer {
   background-color: #000;
   color: whiter;
@@ -126,7 +121,7 @@ p {
 
 @media (max-width: 576px) {
   .social-icons {
-    font-size: 2rem; /* Tamaño del texto en dispositivos pequeños */
+    font-size: 2rem; 
   }
 }
 
@@ -246,19 +241,18 @@ p {
   position: sticky;
   top: 0;
   z-index: 1000;
-  margin-bottom: 20px; /* Espacio adicional para evitar superposición */
+  margin-bottom: 20px; 
 }
 
-/* Ajuste de compensación para la posición de desplazamiento */
 :target::before {
   content: "";
   display: block;
-  height: 6em; /* Ajusta la altura según el tamaño del navbar */
-  margin: -6em 0 0; /* Ajusta el margen superior según la altura */
+  height: 6em;
+  margin: -6em 0 0; 
 }
 
 #containerDetalles {
-  scroll-padding-top: 120px; /* Ajusta el valor según tus necesidades */
+  scroll-padding-top: 120px; 
 }
 
 
