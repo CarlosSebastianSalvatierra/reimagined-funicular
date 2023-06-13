@@ -9,7 +9,7 @@ body {
 #containerPadre {
   background-color: white;
   border-radius: 1em;
-  margin-top: auto;
+  margin-top: 4.8em;
 }
 
 /* SECCIONES */
@@ -239,3 +239,26 @@ p {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-bottom: 20px; /* Espacio adicional para evitar superposición */
+}
+
+/* Ajuste de compensación para la posición de desplazamiento */
+:target::before {
+  content: "";
+  display: block;
+  height: 6em; /* Ajusta la altura según el tamaño del navbar */
+  margin: -6em 0 0; /* Ajusta el margen superior según la altura */
+}
+
+#containerDetalles {
+  scroll-padding-top: 120px; /* Ajusta el valor según tus necesidades */
+}
+
+

@@ -69,9 +69,15 @@ const mostrarDetalles = (posicion) => {
       //CREACION DEL FORMULARIO
 
       agregarFormularioBootstrap();
-      
-      
-      contenedor.scrollIntoView({ behavior: 'smooth' });
+
+      const margenSuperior = 80; // Ajusta el valor según tus necesidades
+
+      contenedor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    
+      // Esperar a que finalice el desplazamiento suave
+      setTimeout(() => {
+        window.scrollBy(0, -margenSuperior);
+      }, 500); // Ajusta el tiempo de espera según tus necesidades
     })
     .catch(error => {
       console.log('Error:', error);
@@ -177,7 +183,7 @@ function validarFormularioContacto() {
 
   // Verificar si el teléfono tiene 10 dígitos
   if (telefono.length < 10 || isNaN(telefono)) {
-    alert("El teléfono debe tener como mínimo 10 dígitos");
+    alert("El teléfono debe ser un número de mínimo 10 dígitos");
     return false;
   }
 
@@ -215,8 +221,8 @@ function validarFormularioPreiscripcion(event) {
   }
 
   // Validar que el teléfono tenga al menos 10 cifras
-  if (telefono.length < 10) {
-    alert("El teléfono debe tener al menos 10 cifras");
+  if (telefono.length < 10 || isNaN(telefono)) {
+    alert("El teléfono debe ser un número de al menos 10 cifras");
     return false;
   }
 
