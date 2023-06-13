@@ -240,7 +240,7 @@ p {
   transform: translateY(0);
 }
 
-
+/* ARREGLO DEL NAV */
 
 .custom-navbar {
   position: sticky;
@@ -262,3 +262,8 @@ p {
 }
 
 
+/* MENU HAMBURGUESA */
+
+.navbar-toggler {
+  margin-right: 1em;
+}

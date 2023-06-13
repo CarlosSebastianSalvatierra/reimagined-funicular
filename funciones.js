@@ -49,9 +49,9 @@ const mostrarDetalles = (posicion) => {
       descripcionElement.textContent = capacitacion["descripcion"];
       presentacionFormulario.textContent = "Formulario de Preinscripción"
 
-      tituloElement.classList.add("descripcionCreada");
+      tituloElement.classList.add("descripcionCreada", "mt-4", "mb-4");
       descripcionElement.classList.add("descripcionCreada");
-      presentacionFormulario.classList.add("descripcionCreada");
+      presentacionFormulario.classList.add("descripcionCreada", "mt-4", "mb-4");
 
       //Agregando estilo a los elementos HTML
       tituloElement.style.fontFamily = "'Open Sans', sans-serif;"
@@ -99,23 +99,16 @@ const agregarFormularioBootstrap = () => {
   var campoEmail = crearCampoFormulario('E-Mail', 'email', 'email', 'Ingrese su correo electrónico');
   var campoTelefono = crearCampoFormulario('Teléfono', 'telefono', 'text', 'Ingrese su número de teléfono');
 
-
   // Crear div para el botón Enviar
   var divBoton = document.createElement('div');
-  divBoton.classList.add('col-md-4', 'offset-md-8', 'text-center');
+  divBoton.classList.add('col-md-12', 'text-center'); // Botón centrado
 
   // Crear botón Enviar
   var botonEnviar = document.createElement('button');
   botonEnviar.type = 'submit';
-  botonEnviar.classList.add('btn', 'btn-primary');
-  botonEnviar.textContent = 'Enviar';
+  botonEnviar.classList.add('btn', 'btn-primary', 'btn-block'); // Agregar clase btn-block
+  botonEnviar.textContent = 'Preinscribirse';
 
-  // Agregar el botón Enviar al div
-  divBoton.appendChild(botonEnviar);
-
-  // Agregar el div al formulario
-  formulario.appendChild(divBoton);
-  
 
 
   // Agregar campos al formulario
@@ -124,14 +117,19 @@ const agregarFormularioBootstrap = () => {
   formulario.appendChild(campoDni);
   formulario.appendChild(campoEmail);
   formulario.appendChild(campoTelefono);
-  // Agregar el botón Enviar al formulario
-  formulario.appendChild(botonEnviar);
+
+    // Agregar el botón Enviar al div
+    divBoton.appendChild(botonEnviar);
+
+    // Agregar el div al formulario
+    formulario.appendChild(divBoton);
 
   formulario.addEventListener('submit', validarFormularioPreiscripcion);
 
   // Agregar el formulario al contenedor
   contenedor.appendChild(formulario);
 };
+
 
 // Función auxiliar para crear un campo de formulario
 const crearCampoFormulario = (labelText, id, type, placeholder) => {
@@ -175,6 +173,11 @@ function validarFormularioContacto() {
     return false;
   }
 
+  if (!/^[a-zA-Z]+$/.test(nombre) || !/^[a-zA-Z]+$/.test(apellido)) {
+    alert("El nombre y el apellido solo deben contener letras");
+    return false;
+  }
+
   // Verificar si el email contiene un punto y un arroba
   if (email.indexOf(".") === -1 || email.indexOf("@") === -1 || email.length < 6) {
     alert("El email debe contener un punto y un arroba y no puede tener menos de 6 caracteres");
@@ -207,10 +210,21 @@ function validarFormularioPreiscripcion(event) {
     return false;
   }
 
+  if (!/^[a-zA-Z]+$/.test(nombre) || !/^[a-zA-Z]+$/.test(apellido)) {
+    alert("El nombre y el apellido solo deben contener letras");
+    return false;
+  }
+
+  // Validar que el DNI sea un número
+  if (isNaN(dni)) {
+    alert("El DNI debe ser un número");
+    return false;
+  }
+
   // Validar que el DNI esté entre 1 millón y 99 millones
   var dniNumero = parseInt(dni);
   if (isNaN(dniNumero) || dniNumero < 1000000 || dniNumero > 99000000) {
-    alert("El DNI debe estar entre 1 millón y 99 millones");
+    alert("El DNI debe ser un número y estar entre 1 millón y 99 millones");
     return false;
   }
 
