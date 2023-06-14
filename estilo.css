@@ -17,7 +17,18 @@ body {
 nav {
   background-color: rgba(251,253,253,255);
   color: #000;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-weight: bolder;
+}
+
+.nav-link {
+  margin-left: 1em;
+  transition: transform 0.3s ease-in-out; /* Agrega una transición suave al efecto */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+
+.nav-link:hover {
+  transform: scale(1.2); /* Aplica una escala del 110% al elemento en el hover */
 }
 
 footer {
@@ -28,6 +39,15 @@ footer {
 #footerText {
   color: white;
 }
+
+.navbar-brand {
+  transition: transform 0.3s ease-in-out; /* Agrega una transición suave al efecto */
+}
+
+.navbar-brand:hover {
+  transform: scale(1.2); /* Aplica una escala del 110% al elemento en el hover */
+}
+
 
 .text-right {
   text-align: right;
@@ -183,7 +203,7 @@ p {
 
 .card-title {
   overflow: hidden;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 /* CAROUSEL */

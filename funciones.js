@@ -63,15 +63,12 @@ const mostrarDetalles = (posicion) => {
       contenedor.appendChild(descripcionElement);
       contenedor.appendChild(presentacionFormulario);
 
-
-
-
       //CREACION DEL FORMULARIO
 
       agregarFormularioBootstrap();
 
+      // Scrolleo adonde aparecen los datos
       const margenSuperior = 80;
-
       contenedor.scrollIntoView({ behavior: 'smooth', block: 'start' });
     
       setTimeout(() => {
@@ -95,6 +92,7 @@ const agregarFormularioBootstrap = () => {
   var campoDni = crearCampoFormulario('DNI', 'dni', 'text', 'Ingrese su DNI');
   var campoEmail = crearCampoFormulario('E-Mail', 'email', 'email', 'Ingrese su correo electrónico');
   var campoTelefono = crearCampoFormulario('Teléfono', 'telefono', 'text', 'Ingrese su número de teléfono');
+  var campoDireccion = crearCampoFormulario('Dirección', 'direccion', 'text', 'Ingrese su dirección');
 
   var divBoton = document.createElement('div');
   divBoton.classList.add('col-md-12', 'text-center'); 
@@ -109,6 +107,7 @@ const agregarFormularioBootstrap = () => {
   formulario.appendChild(campoDni);
   formulario.appendChild(campoEmail);
   formulario.appendChild(campoTelefono);
+  formulario.appendChild(campoDireccion)
 
   divBoton.appendChild(botonEnviar);
 
@@ -148,6 +147,48 @@ function validarFormularioContacto() {
   var apellido = document.getElementById("apellidoContacto").value;
   var email = document.getElementById("emailContacto").value;
   var telefono = document.getElementById("telefonoContacto").value;
+  
+
+  // INICIO CAMBIOS
+
+  const nombreInput = document.getElementById('nombreContacto');
+  const apellidoInput = document.getElementById('apellidoContacto');
+  const emailInput = document.getElementById('emailContacto');
+  const telefonoInput = document.getElementById('telefonoContacto');
+  
+  if (nombreInput.value.match(/^[A-Za-z]{2,}$/)) {
+    nombreInput.classList.remove('is-invalid');
+    nombreInput.classList.add('is-valid');
+  } else {
+    nombreInput.classList.remove('is-valid');
+    nombreInput.classList.add('is-invalid');
+  }
+  
+  if (apellidoInput.value.match(/^[A-Za-z]{2,}$/)) {
+    apellidoInput.classList.remove('is-invalid');
+    apellidoInput.classList.add('is-valid');
+  } else {
+    apellidoInput.classList.remove('is-valid');
+    apellidoInput.classList.add('is-invalid');
+  }
+  
+  if (emailInput.value.match(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/)) {
+    emailInput.classList.remove('is-invalid');
+    emailInput.classList.add('is-valid');
+  } else {
+    emailInput.classList.remove('is-valid');
+    emailInput.classList.add('is-invalid');
+  }
+  
+  if (telefonoInput.value.match(/^\d{10,}$/)) {
+    telefonoInput.classList.remove('is-invalid');
+    telefonoInput.classList.add('is-valid');
+  } else {
+    telefonoInput.classList.remove('is-valid');
+    telefonoInput.classList.add('is-invalid');
+  }
+
+  // FIN CAMBIOS
 
   if (nombre === "" || apellido === "" || email === "" || telefono === "") {
     alert("Todos los campos son obligatorios");
@@ -164,12 +205,12 @@ function validarFormularioContacto() {
     return false;
   }
 
-  if (email.indexOf(".") === -1 || email.indexOf("@") === -1 || email.length < 6) {
-    alert("El email debe contener un punto y un arroba y no puede tener menos de 6 caracteres");
+  if (!(emailInput.value.match(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/))) {
+    alert("El texto ingresado no cumple con el formato de e-mail");
     return false;
   }
 
-  if (telefono.length < 10 || isNaN(telefono)) {
+  if (telefono.length < 10 || isNaN(telefono) || /[+\-/*=]/.test(telefono)) {
     alert("El teléfono debe ser un número de mínimo 10 dígitos");
     return false;
   }
@@ -186,6 +227,69 @@ function validarFormularioPreiscripcion(event) {
   var dni = document.getElementById("dni").value;
   var email = document.getElementById("email").value;
   var telefono = document.getElementById("telefono").value;
+  var direccion = document.getElementById("direccion").value;
+
+
+// INICIO CAMBIOS
+
+let nombreInput = document.getElementById('nombre');
+let apellidoInput = document.getElementById('apellido');
+let dniInput = document.getElementById('dni');
+let emailInput = document.getElementById('email');
+let telefonoInput = document.getElementById('telefono');
+let direccionInput = document.getElementById('direccion');
+
+if (nombreInput.value.match(/^[A-Za-z]{2,}$/)) {
+  nombreInput.classList.remove('is-invalid');
+  nombreInput.classList.add('is-valid');
+} else {
+  nombreInput.classList.remove('is-valid');
+  nombreInput.classList.add('is-invalid');
+}
+
+if (apellidoInput.value.match(/^[A-Za-z]{2,}$/)) {
+  apellidoInput.classList.remove('is-invalid');
+  apellidoInput.classList.add('is-valid');
+} else {
+  apellidoInput.classList.remove('is-valid');
+  apellidoInput.classList.add('is-invalid');
+}
+
+if (dniInput.value.match(/^[0-9]{7,8}$/)) {
+  dniInput.classList.remove('is-invalid');
+  dniInput.classList.add('is-valid');
+} else {
+  dniInput.classList.remove('is-valid');
+  dniInput.classList.add('is-invalid');
+}
+
+if (emailInput.value.match(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/)) {
+  emailInput.classList.remove('is-invalid');
+  emailInput.classList.add('is-valid');
+} else {
+  emailInput.classList.remove('is-valid');
+  emailInput.classList.add('is-invalid');
+}
+
+if (telefonoInput.value.match(/^\d{10,}$/)) {
+  telefonoInput.classList.remove('is-invalid');
+  telefonoInput.classList.add('is-valid');
+} else {
+  telefonoInput.classList.remove('is-valid');
+  telefonoInput.classList.add('is-invalid');
+}
+
+if (direccion.length > 8) {
+  direccionInput.classList.remove('is-invalid');
+  direccionInput.classList.add('is-valid');
+} else {
+  direccionInput.classList.remove('is-valid');
+  direccionInput.classList.add('is-invalid');
+}
+
+// FIN CAMBIOS
+
+
 
   if (nombre.length < 2 || apellido.length < 2) {
     alert("El nombre y el apellido deben tener al menos 2 caracteres");
@@ -209,15 +313,21 @@ function validarFormularioPreiscripcion(event) {
     return false;
   }
 
-  if (email.length < 6 || email.indexOf("@") === -1 || email.indexOf(".") === -1) {
-    alert("El email debe tener más de 6 caracteres y contener un arroba (@) y un punto (.)");
+  if (!(emailInput.value.match(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/))) {
+    alert("El texto ingresado no cumple con el formato de e-mail");
     return false;
   }
 
-  if (telefono.length < 10 || isNaN(telefono)) {
+  if (telefono.length < 10 || isNaN(telefono) || /[+\-/*=]/.test(telefono)) {
     alert("El teléfono debe ser un número de al menos 10 cifras");
     return false;
   }
+
+  if (direccion.length < 8) {
+    alert("La dirección debe tener más de 8 caracteres");
+    return false;
+  } 
+  
 
   alert("Se han registrado sus datos")
   return true;
@@ -239,3 +349,7 @@ function checkScroll() {
   }
 }
 window.addEventListener('scroll', checkScroll);
+
+
+
+
