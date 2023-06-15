@@ -156,7 +156,7 @@ function validarFormularioContacto() {
   const emailInput = document.getElementById('emailContacto');
   const telefonoInput = document.getElementById('telefonoContacto');
   
-  if (nombreInput.value.match(/^[A-Za-z]{2,}$/)) {
+  if (nombreInput.value.match(/^[A-Za-z\s]{2,}$/)) {
     nombreInput.classList.remove('is-invalid');
     nombreInput.classList.add('is-valid');
   } else {
@@ -164,7 +164,7 @@ function validarFormularioContacto() {
     nombreInput.classList.add('is-invalid');
   }
   
-  if (apellidoInput.value.match(/^[A-Za-z]{2,}$/)) {
+  if (apellidoInput.value.match(/^[A-Za-z\s]{2,}$/)) {
     apellidoInput.classList.remove('is-invalid');
     apellidoInput.classList.add('is-valid');
   } else {
@@ -200,7 +200,7 @@ function validarFormularioContacto() {
     return false;
   }
 
-  if (!/^[a-zA-Z]+$/.test(nombre) || !/^[a-zA-Z]+$/.test(apellido)) {
+  if (!/^[a-zA-Z\s]+$/.test(nombre) || !/^[a-zA-Z\s]+$/.test(apellido)) {
     alert("El nombre y el apellido solo deben contener letras");
     return false;
   }
@@ -239,7 +239,7 @@ let emailInput = document.getElementById('email');
 let telefonoInput = document.getElementById('telefono');
 let direccionInput = document.getElementById('direccion');
 
-if (nombreInput.value.match(/^[A-Za-z]{2,}$/)) {
+if (nombreInput.value.match(/^[A-Za-z\s]{2,}$/)) {
   nombreInput.classList.remove('is-invalid');
   nombreInput.classList.add('is-valid');
 } else {
@@ -247,7 +247,7 @@ if (nombreInput.value.match(/^[A-Za-z]{2,}$/)) {
   nombreInput.classList.add('is-invalid');
 }
 
-if (apellidoInput.value.match(/^[A-Za-z]{2,}$/)) {
+if (apellidoInput.value.match(/^[A-Za-z\s]{2,}$/)) {
   apellidoInput.classList.remove('is-invalid');
   apellidoInput.classList.add('is-valid');
 } else {
@@ -296,7 +296,7 @@ if (direccion.length > 8) {
     return false;
   }
 
-  if (!/^[a-zA-Z]+$/.test(nombre) || !/^[a-zA-Z]+$/.test(apellido)) {
+  if (!/^[a-zA-Z\s]+$/.test(nombre) || !/^[a-zA-Z\s]+$/.test(apellido)) {
     alert("El nombre y el apellido solo deben contener letras");
     return false;
   }
