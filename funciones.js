@@ -15,18 +15,18 @@ function zoomOut(img) {
 }
 
 
-function scrollToSectionMargen(event) {
-  event.preventDefault(); 
-  var targetSection = document.querySelector(event.target.getAttribute('href'));
-  var offset = 100;
-  if (targetSection) {
-    var targetOffset = targetSection.offsetTop - offset;
-    window.scrollTo({
-      top: targetOffset,
-      behavior: 'smooth'
-    });
-  }
-}
+// function scrollToSectionMargen(event) {
+//   event.preventDefault(); 
+//   var targetSection = document.querySelector(event.target.getAttribute('href'));
+//   var offset = 100;
+//   if (targetSection) {
+//     var targetOffset = targetSection.offsetTop - offset;
+//     window.scrollTo({
+//       top: targetOffset,
+//       behavior: 'smooth'
+//     });
+//   }
+// }
 
 
 const mostrarDetalles = (posicion) => {
@@ -67,13 +67,23 @@ const mostrarDetalles = (posicion) => {
 
       agregarFormularioBootstrap();
 
-      // Scrolleo adonde aparecen los datos
-      const margenSuperior = 80;
-      contenedor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // const margenSuperior = 80;
+      // contenedor.scrollIntoView({ behavior: 'smooth', block: 'start' });
     
-      setTimeout(() => {
-        window.scrollBy(0, -margenSuperior);
-      }, 500);
+      // setTimeout(() => {
+      //    window.scrollBy(0, -margenSuperior);
+      //  }, 800);
+
+      
+      // CAMBIOS
+
+      const margenSuperior = 80;
+      const rect = contenedor.getBoundingClientRect();
+      const desplazamiento = window.pageYOffset + rect.top - margenSuperior;
+      window.scrollTo({ top: desplazamiento, behavior: 'smooth' });
+
+      // FIN CAMBIOS
+
     })
     .catch(error => {
       console.log('Error:', error);
@@ -349,7 +359,6 @@ function checkScroll() {
   }
 }
 window.addEventListener('scroll', checkScroll);
-
 
 
 

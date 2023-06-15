@@ -22,13 +22,13 @@ nav {
 
 .nav-link {
   margin-left: 1em;
-  transition: transform 0.3s ease-in-out; /* Agrega una transición suave al efecto */
+  transition: transform 0.3s ease-in-out;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   
 }
 
 .nav-link:hover {
-  transform: scale(1.2); /* Aplica una escala del 110% al elemento en el hover */
+  transform: scale(1.2);
 }
 
 footer {
@@ -41,11 +41,11 @@ footer {
 }
 
 .navbar-brand {
-  transition: transform 0.3s ease-in-out; /* Agrega una transición suave al efecto */
+  transition: transform 0.3s ease-in-out; 
 }
 
 .navbar-brand:hover {
-  transform: scale(1.2); /* Aplica una escala del 110% al elemento en el hover */
+  transform: scale(1.2); 
 }
 
 
